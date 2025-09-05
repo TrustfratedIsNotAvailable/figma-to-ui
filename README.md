@@ -1,12 +1,22 @@
-# React + Vite
+# Figma-to-UI React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React frontend built from Figma designs using **Tailwind CSS** and popular UI libraries.
+#### Check out the live demo here: [https://figma-to-ui-two.vercel.app/](https://figma-to-ui-two.vercel.app/)
 
-Currently, two official plugins are available:
+### Tech Stack & Libraries
+- **React 19**  
+- **Tailwind CSS 4**   
+- **React Icons**   
+- **Lucide React** 
+- **Recharts** 
+- **RC Progress** 
+- **Swiper**  
+- **Marquee**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Installation
+```bash
+git clone https://github.com/TrustfratedIsNotAvailable/figma-to-ui.git
+cd figma-to-ui
+npm install
+npm run dev
+```

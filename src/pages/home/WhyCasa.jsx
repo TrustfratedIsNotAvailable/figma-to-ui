@@ -75,25 +75,25 @@ const WhyCasa = ({id}) => {
 
           <ul className="space-y-4">
             <li className="flex items-center gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-green-700">
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-brand-50">
                 <DollarSign className="w-4 h-4" />
               </span>
               <span>Instant Cash, No Waiting</span>
             </li>
             <li className="flex items-center gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-green-700">
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-brand-50">
                 <CreditCard className="w-4 h-4" />
               </span>
               <span>No Hidden Fees, No Surprises</span>
             </li>
             <li className="flex items-center gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-green-700">
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-brand-50">
                 <Server className="w-4 h-4" />
               </span>
               <span>Seamless POS & Payment Processor</span>
             </li>
             <li className="flex items-center gap-3">
-              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-green-700">
+              <span className="w-7 h-7 flex items-center justify-center rounded-full bg-green-100 text-brand-50">
                 <ShieldCheck className="w-4 h-4" />
               </span>
               <span>Secure & Compliant Transactions</span>

@@ -129,7 +129,7 @@ const PaymentSteps = () => {
                   key={i}
                   className="flex items-center font-semibold text-gray-150"
                 >
-                  <span className="flex items-center justify-center w-5 h-5 mr-2 rounded-full bg-green-100 text-green-600">
+                  <span className="flex items-center justify-center w-5 h-5 mr-2 rounded-full bg-lightgreen-100 text-brand-50">
                     <Check size={14} strokeWidth={2} />
                   </span>
                   {point}

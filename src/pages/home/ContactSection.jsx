@@ -29,7 +29,7 @@ const ContactSection = ({ id }) => {
               <div className="bg-white rounded-2xl p-6 w-72 shadow-lg mb-6">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="bg-green-100 w-8 h-8 flex items-center justify-center rounded-full">
-                    <Users className="w-5 h-5 text-green-700" />
+                    <Users className="w-5 h-5 text-brand-500" />
                   </div>
                   <h4 className="font-medium text-gray-800">Total Users</h4>
                 </div>
@@ -97,7 +97,7 @@ const ContactSection = ({ id }) => {
               <div className="bg-white rounded-2xl p-6 w-72 shadow-lg mb-6">
                 <div className="flex items-center gap-3 mb-2">
                   <div className="bg-green-100 w-8 h-8 flex items-center justify-center rounded-full">
-                    <Users className="w-5 h-5 text-green-700" />
+                    <Users className="w-5 h-5 text-brand-50" />
                   </div>
                   <h4 className="font-medium text-gray-800">Total Users</h4>
                 </div>

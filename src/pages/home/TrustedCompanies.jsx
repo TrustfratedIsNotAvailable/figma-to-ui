@@ -27,7 +27,7 @@ const companies = [
 
 const CompanyMarquee = () => {
   return (
-    <div className="bg-green-800">
+    <div className="bg-brand-50">
       <div className="container mx-auto px-6 md:px-0 text-white py-4 flex items-center gap-6">
         {/* Left fixed text */}
         <span className="font-bold whitespace-nowrap">

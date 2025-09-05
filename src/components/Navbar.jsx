@@ -31,7 +31,7 @@ const Navbar = () => {
               <li key={i}>
                 <a
                   href={`#${link.id}`}
-                  className="text-gray-700 hover:text-green-600 transition"
+                  className="text-gray-700 hover:text-brand-50 transition"
                 >
                   {link.name}
                 </a>
@@ -64,7 +64,7 @@ const Navbar = () => {
                 <li key={i}>
                   <a
                     href={`#${link.id}`}
-                    className="block text-gray-700 hover:text-green-600"
+                    className="block text-gray-700 hover:text-brand-50"
                     onClick={() => setOpen(false)}
                   >
                     {link.name}

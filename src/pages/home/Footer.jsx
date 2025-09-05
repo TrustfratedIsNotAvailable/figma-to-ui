@@ -40,6 +40,7 @@ const Footer = () => {
             >
               <FaTwitter className="text-brand-50" />
             </a>
+            
             <a
               href="#"
               className="w-9 h-9 rounded-full bg-lightgreen-50 flex items-center justify-center hover:bg-green-200"

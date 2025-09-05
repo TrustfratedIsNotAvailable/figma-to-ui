@@ -17,7 +17,7 @@ const UserList = ({ users = [1, 2, 3, 4, 5], extraCount = "9+" }) => (
           className="w-8 h-8 rounded-full border-2 border-white"
         />
       ))}
-      <span className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-xs font-medium text-green-900 border-2 border-white cursor-pointer">
+      <span className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-xs font-medium text-brand-50 border-2 border-white cursor-pointer">
         {extraCount}
       </span>
     </div>
