@@ -8,17 +8,20 @@ import ProfitIcon from "../../components/icons/ProfitIcon";
 import StackedLayersIcon from "../../components/icons/StackedLayersIcon";
 import SalesOverviewCard from "../../components/SalesOverviewCard";
 import { Line } from "rc-progress";
+import BalanceInfo from "../../components/BalanceInfo";
+import UserList from "../../components/UserList";
+import OnlineInfo from "../../components/OnlineInfo";
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-white py-16 px-6">
+    <section className="container mx-auto py-12 px-6 md:px-0">
       {/* Top Badge */}
       <div className="flex justify-center">
         <Badge> Fast, secure, hassle-free </Badge>
       </div>
 
       {/* Heading */}
-      <h1 className="text-center text-4xl font-bold text-gray-900 mt-6 leading-tight">
+      <h1 className="text-center text-5xl font-bold text-gray-900 mt-6 leading-tight">
         Get Paid Faster{" "}
         <span className="inline-flex items-center relative ml-5">
           {/* Second circle (background) */}
@@ -84,7 +87,7 @@ export default function HeroSection() {
             </span>
           </h3>
           <div className="bg-white p-4 rounded-lg w-max mx-auto">
-            <p className="text-grey-100">
+            <p className="text-gray-150">
               Available amount{" "}
               <p className="font-bold text-xl text-gray-900">
                 $15,375 <span className="text-sm font-medium">USD</span>
@@ -101,7 +104,7 @@ export default function HeroSection() {
             </p>
             <div className="bg-lightgreen-100 p-4 rounded-xl">
               <p className="flex justify-between font-semibold mb-8">
-                <span className="text-md text-grey-100">Factored balance:</span>
+                <span className="text-md text-gray-150">Factored balance:</span>
                 <span className="text-xl text-black">$11,531.25</span>
               </p>
 
@@ -136,126 +139,22 @@ export default function HeroSection() {
             </span>
           </h3>
 
-          {/* === Desktop Layout === */}
-          <div className="hidden sm:block">
-            {/* User List */}
-            <div className="absolute transform -rotate-12 top-28 left-20 p-3 gap-4 rounded-2xl bg-white shadow-md">
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-bold text-black">
-                  Recent User
-                </span>
-                <span className="text-xs font-semibold text-gray-400 cursor-pointer">
-                  View All
-                </span>
-              </div>
-              <div className="flex mt-3 -space-x-2 items-center">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <img
-                    key={i}
-                    src={`https://i.pravatar.cc/40?img=${i}`}
-                    alt="user"
-                    className="w-8 h-8 rounded-full border-2 border-white"
-                  />
-                ))}
-                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-xs font-medium text-green-900 border-2 border-white cursor-pointer">
-                  9+
-                </span>
-              </div>
+          {/* Desktop Layout */}
+          <div className="hidden lg:block">
+            <div className="absolute transform -rotate-12 top-28 left-20">
+              <UserList />
             </div>
-
-            {/* Balance Info */}
-            <div className="absolute transform -rotate-2 top-54 left-40 p-4 gap-2 rounded-2xl bg-white shadow-md w-48">
-              <p className="text-lg text-gray-500">Total Balance</p>
-              <p className="text-2xl font-bold text-gray-900">23,576.00</p>
-              <button className="mt-2 flex items-center gap-1 text-lg text-gray-400 cursor-pointer">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-green-100">
-                  <Plus className="w-4 h-4 text-black" />
-                </span>
-                Add Number
-              </button>
-            </div>
-
-            {/* Online Info */}
-            <div className="absolute transform rotate-6 top-90 left-6 p-4 rounded-2xl bg-white shadow-md flex items-center gap-4">
-              <img
-                src="https://i.pravatar.cc/48?img=12"
-                alt="restaurant"
-                className="w-12 h-12 rounded-full border-2 border-gray-200 flex-shrink-0"
-              />
-              <div className="flex flex-col flex-1">
-                <div className="flex justify-between items-center text-xl font-bold text-black">
-                  <p>Online</p>
-                  <span>+$10K</span>
-                </div>
-                <div className="flex justify-between items-center mt-1">
-                  <p className="text-base font-medium text-gray-400 mr-2">
-                    Tony Restaurant
-                  </p>
-                  <Badge>Confirm</Badge>
-                </div>
-              </div>
+            <BalanceInfo className="absolute transform -rotate-2 top-54 left-40" />
+            <div className="absolute top-90 left-6">
+              <OnlineInfo rotate={6} />
             </div>
           </div>
 
-          {/* === Mobile Layout === */}
-          <div className="sm:hidden flex flex-col gap-4">
-            {/* User List */}
-            <div className="p-3 gap-3 rounded-2xl bg-white shadow-md">
-              <div className="flex justify-between items-center">
-                <span className="text-lg font-bold text-black">
-                  Recent User
-                </span>
-                <span className="text-xs font-semibold text-gray-400 cursor-pointer">
-                  View All
-                </span>
-              </div>
-              <div className="flex mt-3 -space-x-2 items-center">
-                {[1, 2, 3, 4, 5].map((i) => (
-                  <img
-                    key={i}
-                    src={`https://i.pravatar.cc/40?img=${i}`}
-                    alt="user"
-                    className="w-8 h-8 rounded-full border-2 border-white"
-                  />
-                ))}
-                <span className="w-8 h-8 flex items-center justify-center rounded-full bg-green-100 text-xs font-medium text-green-900 border-2 border-white cursor-pointer">
-                  9+
-                </span>
-              </div>
-            </div>
-
-            {/* Balance Info */}
-            <div className="p-4 gap-2 rounded-2xl bg-white shadow-md">
-              <p className="text-lg text-gray-500">Total Balance</p>
-              <p className="text-2xl font-bold text-gray-900">23,576.00</p>
-              <button className="mt-2 flex items-center gap-1 text-lg text-gray-400 cursor-pointer">
-                <span className="w-5 h-5 flex items-center justify-center rounded-full bg-green-100">
-                  <Plus className="w-4 h-4 text-black" />
-                </span>
-                Add Number
-              </button>
-            </div>
-
-            {/* Online Info */}
-            <div className="p-4 rounded-2xl bg-white shadow-md flex items-center gap-4">
-              <img
-                src="https://i.pravatar.cc/48?img=12"
-                alt="restaurant"
-                className="w-12 h-12 rounded-full border-2 border-gray-200 flex-shrink-0"
-              />
-              <div className="flex flex-col flex-1">
-                <div className="flex justify-between items-center text-xl font-bold text-black">
-                  <p>Online</p>
-                  <span>+$10K</span>
-                </div>
-                <div className="flex justify-between items-center mt-1">
-                  <p className="text-base font-medium text-gray-400 mr-2">
-                    Tony Restaurant
-                  </p>
-                  <Badge>Confirm</Badge>
-                </div>
-              </div>
-            </div>
+          {/* Mobile Layout */}
+          <div className="lg:hidden flex flex-col gap-4">
+            <UserList />
+            <BalanceInfo />
+            <OnlineInfo isMobile />
           </div>
         </div>
       </div>

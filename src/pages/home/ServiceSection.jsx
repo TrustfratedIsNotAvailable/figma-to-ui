@@ -5,7 +5,7 @@ import { cardsData } from "../../data/cardsData";
 
 const ServiceSection = () => {
   return (
-    <section className="w-full bg-white py-16 px-6">
+    <section className="container mx-auto py-16 px-6 md:px-0">
       {/* Top Section */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div>
@@ -15,7 +15,7 @@ const ServiceSection = () => {
           </h2>
         </div>
         <div>
-          <p className="font-manrope text-grey-100 text-xl mb-4">
+          <p className="font-manrope text-gray-150 text-xl mb-4">
             Empowering businesses with faster cash access, CASA provides a
             secure, fast, and flexible solution to get early payments for credit
             card sales.

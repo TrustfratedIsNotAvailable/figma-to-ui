@@ -1,22 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 @import "tailwindcss";
+@plugin "daisyui";
 
 @theme {
-  --font-manrope: Manrope,sans-serif;
-  --font-roboto: Roboto,sans-serif;
+  --font-manrope: Manrope, sans-serif;
+  --font-roboto: Roboto, sans-serif;
 
-  --color-brand-50: #0F4E23;
+  --color-brand-50: #0f4e23;
   --color-black: #141414;
 
-  --color-lightgreen-50:#DFEDE3; /*1*/
-  --color-lightgreen-100:#E0F0E5; /*2*/
-  --color-lightgreen-150:#DAFFC2; /*3*/
-  --color-lightgreen-200:#BFE5A6; /*4*/
+  --color-lightgreen-50: #dfede3; /*1*/
+  --color-lightgreen-100: #e0f0e5; /*2*/
+  --color-lightgreen-150: #daffc2; /*3*/
+  --color-lightgreen-200: #bfe5a6; /*4*/
 
-  --color-yellow-50: #F1F68E; /*1*/
-  --color-yellow-100: #DEE385; /*2*/
+  --color-yellow-50: #f1f68e; /*1*/
+  --color-yellow-100: #dee385; /*2*/
 
-  --color-grey-50: #F8F8F8; /*1*/
-  --color-grey-100: #686868; /*body para*/
+  --color-grey-50: #f8f8f8; /*1*/
+  --color-gray-100:#F2F2F2; /*2*/
+  --color-gray-150: #686868; /*body para*/
+}
+
+.swiper-pagination {
+  position: relative !important; /* move it out of absolute positioning */
+  margin-top: 1.5rem; /* space above dots */
+  display: flex;
+  justify-content: center;
+}
+
+/* Active bullet */
+.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #0f4e23 !important; /* your green */
 }

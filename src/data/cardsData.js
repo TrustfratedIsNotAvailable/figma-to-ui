@@ -10,7 +10,7 @@ export const cardsData = [
       "No more waiting weeks—convert daily card transactions into cash within 24 hours to keep your business running smoothly.",
     bgColor: "bg-grey-50",
     textColor: "text-black",
-    descriptionColor: "text-grey-100",
+    descriptionColor: "text-gray-150",
     Icon: SecureIcon,
   },
   {
@@ -19,7 +19,7 @@ export const cardsData = [
       "No Hidden Fees, No Surprises. Enjoy clear, upfront pricing with flexible funding options, so you always know what to expect.",
     bgColor: "bg-grey-50",
     textColor: "text-black",
-    descriptionColor: "text-grey-100",
+    descriptionColor: "text-gray-150",
     Icon: PricingIcon,
   },
   {

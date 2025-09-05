@@ -6,7 +6,7 @@ const InfoCard = ({
   description,
   bgColor = "bg-grey-50",
   titleColor = "text-black",
-  descriptionColor = "text-grey-100",
+  descriptionColor = "text-gray-150",
   Icon,
 }) => {
   return (
