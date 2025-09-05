@@ -1,8 +1,6 @@
-// src/data/cardsData.js
-import SecureIcon from "../components/icons/SecureIcon";
-import PricingIcon from "../components/icons/PricingIcon";
-import FlexibleIcon from "../components/icons/FlexibleIcon";
-
+import { BsCardChecklist } from "react-icons/bs";
+import { CiMoneyCheck1 } from "react-icons/ci";
+import { HiOutlineCash } from "react-icons/hi";
 export const cardsData = [
   {
     title: "Secure and Instant Cash Advances",
@@ -11,7 +9,7 @@ export const cardsData = [
     bgColor: "bg-grey-50",
     textColor: "text-black",
     descriptionColor: "text-gray-150",
-    Icon: SecureIcon,
+    Icon: BsCardChecklist,
   },
   {
     title: "Transparent and Fair Pricing Process",
@@ -20,7 +18,7 @@ export const cardsData = [
     bgColor: "bg-grey-50",
     textColor: "text-black",
     descriptionColor: "text-gray-150",
-    Icon: PricingIcon,
+    Icon: CiMoneyCheck1,
   },
   {
     title: "Flexible and Secure Payout Options",
@@ -29,6 +27,6 @@ export const cardsData = [
     bgColor: "bg-brand-50",
     titleColor: "text-white",
     descriptionColor: "text-white",
-      Icon: FlexibleIcon,
+    Icon: HiOutlineCash,
   },
 ];

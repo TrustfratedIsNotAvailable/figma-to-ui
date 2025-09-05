@@ -1,20 +1,19 @@
 import { DollarSign, Plus } from "lucide-react";
 import Badge from "../../components/Badge";
 import Button from "../../components/Button";
-import ArrowStarIcon from "../../components/icons/ArrowStarIcon";
-import AvgSaleIcon from "../../components/icons/AvgSaleIcon";
-import LeafIcon from "../../components/icons/LeafIcon";
-import ProfitIcon from "../../components/icons/ProfitIcon";
-import StackedLayersIcon from "../../components/icons/StackedLayersIcon";
 import SalesOverviewCard from "../../components/SalesOverviewCard";
 import { Line } from "rc-progress";
 import BalanceInfo from "../../components/BalanceInfo";
 import UserList from "../../components/UserList";
 import OnlineInfo from "../../components/OnlineInfo";
+import { BsFillLightningChargeFill, BsStack } from "react-icons/bs";
+import { PiTildeBold } from "react-icons/pi";
+import { ImLeaf } from "react-icons/im";
+import { FaArrowTrendUp } from "react-icons/fa6";
 
-export default function HeroSection() {
+export default function HeroSection({ id }) {
   return (
-    <section className="container mx-auto py-12 px-6 md:px-0">
+    <section id={id} className="container mx-auto py-12 px-6 md:px-0">
       {/* Top Badge */}
       <div className="flex justify-center">
         <Badge> Fast, secure, hassle-free </Badge>
@@ -29,7 +28,7 @@ export default function HeroSection() {
 
           {/* First circle with icon overlapping */}
           <span className="absolute left-0 w-8 h-8 rounded-full bg-yellow-50 flex items-center justify-center -translate-x-1/2">
-            <ProfitIcon className="w-6 h-6" />
+            <FaArrowTrendUp className="w-6 h-6" />
           </span>
         </span>{" "}
         Instant Cash
@@ -54,7 +53,7 @@ export default function HeroSection() {
         <div className="bg-lightgreen-100 rounded-2xl p-6 shadow-sm">
           <h3 className="mb-4 flex items-center gap-3">
             <span className="w-8 h-8 flex-shrink-0 aspect-square flex items-center justify-center rounded-full bg-lightgreen-200">
-              <StackedLayersIcon className="w-6 h-6 text-black" />
+              <BsStack className="w-5 h-5 text-black" />
             </span>
             <span className="text-xl font-semibold text-gray-900">
               Sales overview from Previous Day
@@ -68,7 +67,7 @@ export default function HeroSection() {
           <div className="mt-3 text-sm bg-green-200 p-3 rounded-lg flex items-center gap-3">
             {/* Circle wrapper for the icon */}
             <div className="w-6 h-6 rounded-full bg-brand-50 flex items-center justify-center">
-              <AvgSaleIcon className="w-4 h-4 text-green-200" />
+              <PiTildeBold className="w-4 h-4 text-green-200" />
             </div>
             <span className="text-brand-50">
               Avg. sale: $104.16 / per transaction
@@ -80,7 +79,7 @@ export default function HeroSection() {
         <div className="bg-lightgreen-150 rounded-2xl p-6 shadow-sm">
           <h3 className="mb-12 flex items-center gap-3">
             <span className="w-8 h-8 flex-shrink-0 aspect-square flex items-center justify-center rounded-full bg-lightgreen-200">
-              <ArrowStarIcon className="text-brand-50" />
+              <BsFillLightningChargeFill className="w-5 h-5 text-brand-50" />
             </span>
             <span className="text-xl font-semibold text-gray-900">
               Factoring Possible Amount.
@@ -88,10 +87,10 @@ export default function HeroSection() {
           </h3>
           <div className="bg-white p-4 rounded-lg w-max mx-auto">
             <p className="text-gray-150">
-              Available amount{" "}
-              <p className="font-bold text-xl text-gray-900">
+              Available amount
+              <div className="font-bold text-xl text-gray-900">
                 $15,375 <span className="text-sm font-medium">USD</span>
-              </p>
+              </div>
             </p>
           </div>
 
@@ -132,7 +131,7 @@ export default function HeroSection() {
           {/* Card Header */}
           <h3 className="mb-4 flex items-center gap-3">
             <span className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-yellow-100">
-              <LeafIcon className="text-black" />
+              <ImLeaf className="w-5 h-5 text-black" />
             </span>
             <span className="text-xl font-semibold text-gray-900">
               Secure & Streamlined Workflow

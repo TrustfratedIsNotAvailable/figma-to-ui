@@ -14,8 +14,8 @@ const InfoCard = ({
       <h3 className={`font-roboto font-bold text-2xl mb-4 ${titleColor}`}>{title}</h3>
       {/* {Icon && <Icon className="w-10 h-10" />} */}
       {Icon && (
-        <div className="w-10 h-10 rounded-full bg-lightgreen-100 flex items-center justify-center mb-4">
-          <Icon className="w-8 h-8" />
+        <div className="w-8 h-8 rounded-full bg-lightgreen-100 flex items-center justify-center mb-4">
+          <Icon className="w-5 h-5 text-brand-50" />
         </div>
       )}
       <p className={`${descriptionColor} text-lg leading-relaxed`}>

@@ -2,10 +2,10 @@ import React from "react";
 import PaymentSteps from "../../components/PaymentSteps";
 import SectionHeading from "../../components/SectionHeading";
 
-const HowItWorks = () => {
+const HowItWorks = ({id}) => {
   return (
-    <div className="py-12 bg-grey-50">
-      <div className="container mx-auto">
+    <div id={id} className="py-12 bg-grey-50">
+      <div className="container mx-auto px-6 md:px-0">
         <SectionHeading
           badgeText="How it works"
           title="Simple & Fast Receive Your Payment in 3 Steps!"

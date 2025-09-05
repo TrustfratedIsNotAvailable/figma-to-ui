@@ -3,9 +3,9 @@ import Button from "../../components/Button";
 import InfoCard from "../../components/InfoCard";
 import { cardsData } from "../../data/cardsData";
 
-const ServiceSection = () => {
+const ServiceSection = ({id}) => {
   return (
-    <section className="container mx-auto py-16 px-6 md:px-0">
+    <section id={id} className="container mx-auto py-16 px-6 md:px-0">
       {/* Top Section */}
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center">
         <div>

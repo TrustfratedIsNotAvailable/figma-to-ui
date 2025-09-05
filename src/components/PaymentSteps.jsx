@@ -1,8 +1,8 @@
 import React from "react";
 import Badge from "./Badge";
 import { Check, ChevronRight } from "lucide-react";
-import LeafIcon from "./icons/LeafIcon";
 import UserList from "./UserList";
+import ReceiveMoneyCard from "./ReceiveMoneyCard";
 
 const PaymentSteps = () => {
   const steps = [
@@ -94,25 +94,8 @@ const PaymentSteps = () => {
     },
     {
       top: (
-        <div className="bg-lightgreen-150 px-4 py-4 rounded-xl text-center">
-          <div className="bg-white p-3 rounded-2xl mb-3 flex justify-between items-center shadow-sm">
-            {/* Icon */}
-            <span className="w-7 h-7 flex items-center justify-center rounded-full bg-lightgreen-50">
-              <LeafIcon className="w-4 h-4 text-black" />
-            </span>
-
-            {/* Text Content */}
-            <div>
-              <h4 className="font-semibold text-gray-800">
-                Receive Money from card
-              </h4>
-              <p className="text-sm text-gray-500">
-                Cash deposited within 24 hours
-              </p>
-            </div>
-          </div>
-
-          {/* User List */}
+        <div className="bg-lightgreen-150 px-2.5 py-6 rounded-xl text-center">
+          <ReceiveMoneyCard />
           <UserList />
         </div>
       ),
@@ -127,7 +110,7 @@ const PaymentSteps = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-3 gap-8 mx-auto px-6 md:px-0">
+    <div className="flex flex-col md:flex-row gap-8">
       {steps.map((step, index) => (
         <div
           key={index}

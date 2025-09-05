@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaArrowTrendUp } from "react-icons/fa6";
 import {
   BarChart,
   Bar,
@@ -7,7 +8,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
-import ProfitIcon from "./icons/ProfitIcon";
+
 
 // Weekly data
 const data = [
@@ -28,7 +29,7 @@ const CustomTooltip = ({ active, payload }) => {
       <div className="bg-yellow-50 shadow-md p-2 rounded text-center">
         <div className="font-semibold text-gray-700">Highest Sale</div>
         <div className="flex items-center justify-center gap-1 mt-1">
-          <ProfitIcon className="w-4 h-4 text-green-600" />
+          <FaArrowTrendUp className="w-4 h-4 text-brand-50" />
           <span className="font-bold">${value}</span>
         </div>
       </div>

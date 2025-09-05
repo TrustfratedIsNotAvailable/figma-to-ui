@@ -1,81 +1,94 @@
-// components/Navbar.jsx
-import { useState } from "react";
+import React, { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Button from "./Button";
+import logo from "../assets/logo.png";
+
+const navLinks = [
+  { name: "Services", id: "services" },
+  { name: "How it works", id: "how-it-works" },
+  { name: "Why is different", id: "why-different" },
+  { name: "ReviewsSection", id: "reviews" },
+  { name: "Pricing", id: "pricing" },
+  { name: "Contact", id: "contact" },
+];
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
 
-  const navLinks = [
-    "Services",
-    "How it works",
-    "Why is different",
-    "ReviewsSection",
-    "Pricing",
-    "Contact",
-  ];
-
   return (
-    <nav className="py-4 shadow-md relative">
-      <div className="container mx-auto px-6 md:px-0">
-        {/* Desktop Navbar */}
-        <div className="hidden md:flex items-center justify-between">
+    <>
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 w-full bg-white shadow z-50">
+        <div className="container mx-auto flex items-center justify-between px-6 md:px-0 py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold text-gray-800">MyLogo</div>
+          <a href="#hero" className="flex items-center">
+            <img src={logo} alt="CASA Logo" className="h-8 w-auto" />
+          </a>
 
-          {/* Center Nav Links */}
-          <ul className="flex gap-8 text-gray-700 font-medium">
-            {navLinks.map((link) => (
-              <li key={link} className="cursor-pointer hover:text-gray-900">
-                {link}
+          {/* Desktop Links (show only lg and up) */}
+          <ul className="hidden lg:flex space-x-8">
+            {navLinks.map((link, i) => (
+              <li key={i}>
+                <a
+                  href={`#${link.id}`}
+                  className="text-gray-700 hover:text-green-600 transition"
+                >
+                  {link.name}
+                </a>
               </li>
             ))}
           </ul>
 
-          {/* Right Buttons */}
-          <div className="flex gap-4">
+          {/* Right side buttons (lg and up only) */}
+          <div className="hidden lg:flex gap-4">
             <Button bgColor="bg-lightgreen-50" textColor="text-brand-50">
               Login
             </Button>
             <Button>Sign Up</Button>
           </div>
-        </div>
 
-        {/* Mobile Navbar */}
-        <div className="md:hidden flex items-center justify-between">
-          {/* Hamburger */}
-          <button onClick={() => setOpen(!open)}>
-            {open ? <X size={28} /> : <Menu size={28} />}
+          {/* Mobile Menu Toggle (sm + md) */}
+          <button
+            className="lg:hidden text-gray-700"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
-
-          {/* Logo */}
-          <div className="text-xl font-bold text-gray-800">MyLogo</div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Menu (sm + md only) */}
         {open && (
-          <div className="md:hidden absolute left-0 top-full w-full bg-white shadow-lg mt-2 rounded-lg p-4">
-            <ul className="flex flex-col gap-4 text-gray-700 font-medium">
-              {navLinks.map((link) => (
-                <li key={link} className="cursor-pointer hover:text-gray-900">
-                  {link}
+          <div className="lg:hidden bg-white border-t shadow px-6 py-4">
+            <ul className="flex flex-col space-y-4">
+              {navLinks.map((link, i) => (
+                <li key={i}>
+                  <a
+                    href={`#${link.id}`}
+                    className="block text-gray-700 hover:text-green-600"
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.name}
+                  </a>
                 </li>
               ))}
             </ul>
-
-            <hr className="mt-4 text-gray-200" />
-
-            {/* Buttons inside hamburger */}
-            <p className="cursor-pointer my-4 text-gray-700 hover:text-gray-900">
-              Login
-            </p>
-            <p className="cursor-pointer text-blue-600 hover:underline">
-              Sign Up
-            </p>
+            <div className="flex justify-center gap-3 mt-6">
+              <Button
+                bgColor="bg-lightgreen-50"
+                textColor="text-brand-50"
+                className="w-full"
+              >
+                Login
+              </Button>
+              <Button className="w-full">Sign Up</Button>
+            </div>
           </div>
         )}
-      </div>
-    </nav>
+      </nav>
+
+      {/* Offset for fixed navbar height */}
+      <div className="pt-20"></div>
+    </>
   );
 };
 
